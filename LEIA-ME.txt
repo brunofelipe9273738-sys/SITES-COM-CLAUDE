@@ -1,0 +1,21 @@
+JOALHERIA - COMO INSTALAR (XAMPP)
+
+1. Extraia o ZIP dentro de C:\xampp\htdocs\
+   Deve existir: C:\xampp\htdocs\joalheria\index.php
+   (NÃO pode ficar joalheria\joalheria\index.php)
+2. Inicie Apache e MySQL no painel do XAMPP.
+3. phpMyAdmin > Importar > database/database.sql (se ainda não importou).
+4. Abra http://localhost/joalheria/diagnostico.php  -> tudo deve estar com ✅.
+5. Abra http://localhost/joalheria/usuarios/cadastro.php e crie sua conta.
+6. Para virar admin (aba SQL do phpMyAdmin):
+   UPDATE usuarios SET papel='admin' WHERE email='seu@email.com';
+7. Apague diagnostico.php ao terminar.
+
+Se o MySQL tiver senha, edite config/banco.ini (DB_PASS).
+
+ESTRUTURA
+  config/     configuração e conexão
+  database/   script SQL
+  includes/   funções, segurança, cabeçalho e rodapé
+  usuarios/   cadastro, login, logout
+  assets/     css, js, imagens

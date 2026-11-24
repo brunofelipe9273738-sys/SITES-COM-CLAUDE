@@ -1,0 +1,107 @@
+/* ===== Tokens (identidade visual única) ===== */
+:root{--preto:#0d0d0d;--grafite:#1a1a1a;--ouro:#c9a24b;--ouro-esc:#8a6a1f;--bege:#f6f1e7;--branco:#fff;--cinza:#6b6b6b;
+--fonte-titulo:'Cormorant Garamond',Georgia,serif;--fonte:'Montserrat','Segoe UI',Arial,sans-serif;--raio:2px;--sombra:0 10px 28px rgba(0,0,0,.14)}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--fonte);font-size:15px;line-height:1.6;background:var(--bege);color:var(--preto)}
+h1,h2,h3,h4,.logo{font-family:var(--fonte-titulo);font-weight:600;margin:0}
+a{color:inherit}
+main{max-width:1200px;margin:0 auto;padding:2.5rem 1.25rem;min-height:60vh}
+img{max-width:100%}
+
+/* ===== Cabeçalho ===== */
+.topo{display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap;padding:1rem 2rem;background:var(--preto);color:var(--branco)}
+.logo{color:var(--ouro);letter-spacing:.35em;text-decoration:none;font-size:1.7rem}
+.busca{flex:1;min-width:220px;max-width:480px;display:flex}
+.busca input{flex:1;padding:.65rem .9rem;border:1px solid var(--ouro);border-right:0;background:var(--grafite);color:var(--branco);font:inherit;border-radius:var(--raio) 0 0 var(--raio)}
+.busca button{padding:.65rem 1.2rem;background:var(--ouro);border:0;font:inherit;font-weight:600;cursor:pointer;border-radius:0 var(--raio) var(--raio) 0;transition:.3s}
+.busca button:hover{background:var(--branco)}
+.topo nav{display:flex;gap:1.25rem;align-items:center;font-size:.9rem}
+.topo nav a{text-decoration:none;transition:.3s}.topo nav a:hover{color:var(--ouro)}
+.menu-cat{display:flex;gap:1.75rem;justify-content:center;overflow-x:auto;padding:.9rem 2rem;background:var(--branco);border-bottom:1px solid var(--ouro)}
+.menu-cat a{text-decoration:none;white-space:nowrap;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;transition:.3s}
+.menu-cat a:hover{color:var(--ouro-esc)}
+
+/* ===== Botões (um só padrão) ===== */
+.btn{display:block;width:100%;padding:.85rem 1.6rem;background:var(--preto);color:var(--ouro);border:1px solid var(--preto);font:inherit;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;text-align:center;text-decoration:none;cursor:pointer;border-radius:var(--raio);transition:.3s}
+.btn:hover{background:var(--ouro);color:var(--preto);border-color:var(--ouro)}
+.btn-inline{display:inline-block;width:auto}
+.btn-claro{background:var(--branco);color:var(--preto);border-color:var(--preto)}
+.btn:disabled{opacity:.45;cursor:not-allowed}.btn:disabled:hover{background:inherit;color:inherit}
+
+/* ===== Hero ===== */
+.hero{margin:-2.5rem -1.25rem 0;padding:6rem 1.5rem;text-align:center;color:var(--branco);background:radial-gradient(circle at 50% 0,#2b2210,var(--preto) 70%);border-bottom:3px solid var(--ouro)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);margin:.5rem 0 1rem}
+.hero p{margin:.4rem 0 1.6rem;color:#d8d0bd}
+.hero .eyebrow{color:var(--ouro);letter-spacing:.4em;text-transform:uppercase;font-size:.75rem;margin:0}
+
+/* ===== Seções e grade ===== */
+.secao{margin:3.5rem 0}
+.secao-topo{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ouro);padding-bottom:.6rem;margin-bottom:1.5rem}
+.secao-topo h2,.titulo-pag{font-size:2rem}.titulo-pag{margin-bottom:1.25rem}
+.secao-topo a{font-size:.85rem;text-decoration:none;color:var(--ouro-esc)}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem}
+.contagem{color:var(--cinza);font-size:.85rem}
+
+/* ===== Card de produto ===== */
+.card{display:block;background:var(--branco);padding:.9rem;text-decoration:none;border-radius:var(--raio);transition:.35s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--sombra)}
+.card-foto{position:relative;aspect-ratio:1;overflow:hidden;background:var(--bege)}
+.card-foto img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .card-foto img{transform:scale(1.08)}
+.selo{position:absolute;top:10px;left:10px;background:var(--preto);color:var(--ouro);padding:.2rem .7rem;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.card h3{font-size:1.25rem;margin:.9rem 0 .1rem}
+.cat{margin:0;color:var(--cinza);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+.cat a{text-decoration:none}
+.de{margin:.5rem 0 0;color:#999;text-decoration:line-through;font-size:.85rem}
+.preco{margin:.1rem 0;font-weight:600;font-size:1.1rem}
+.parc{margin:0;color:var(--cinza);font-size:.8rem}
+.sem-foto{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:3rem;color:var(--ouro);background:linear-gradient(135deg,#f6f1e7,#e6d6ae)}
+
+/* ===== Categorias ===== */
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem}
+.cats a{background:var(--preto);color:var(--ouro);padding:1.8rem 1rem;text-align:center;text-decoration:none;font-family:var(--fonte-titulo);font-size:1.3rem;border-radius:var(--raio);transition:.3s}
+.cats a:hover{background:var(--ouro);color:var(--preto)}
+
+/* ===== Filtros e paginação ===== */
+.filtros{display:flex;flex-wrap:wrap;gap:1rem;align-items:end;background:var(--branco);padding:1rem 1.25rem;margin-bottom:1rem;border-radius:var(--raio);font-size:.85rem}
+.filtros input,.filtros select,.info select{padding:.55rem;border:1px solid #cfc8b8;font:inherit;background:var(--branco);display:block;margin-top:.25rem;border-radius:var(--raio)}
+.filtros .btn{height:2.6rem;padding-top:0;padding-bottom:0}
+.paginacao{display:flex;gap:.4rem;justify-content:center;margin:2.5rem 0}
+.paginacao a{padding:.5rem .95rem;background:var(--branco);text-decoration:none;border:1px solid var(--ouro);border-radius:var(--raio)}
+.paginacao a.ativa,.paginacao a:hover{background:var(--preto);color:var(--ouro)}
+
+/* ===== Página de produto ===== */
+.produto{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.galeria{display:grid;gap:1rem}
+.zoom{overflow:hidden;cursor:zoom-in;background:var(--branco);border-radius:var(--raio)}
+.zoom img{width:100%;display:block;transition:transform .3s;transform-origin:center}
+.zoom:hover img{transform:scale(1.8)}
+.sem-foto.grande{aspect-ratio:1;font-size:6rem}
+.info h1{font-size:2.6rem;margin:.2rem 0 .6rem}
+.grande-preco{font-size:2rem}
+.ficha{list-style:none;padding:0;margin:1.25rem 0}
+.ficha li{padding:.5rem 0;border-bottom:1px solid #ddd5c3}
+.info label{display:block;font-size:.85rem;margin-bottom:1.25rem}
+.acoes{display:flex;flex-wrap:wrap;gap:.6rem}.acoes .btn{width:auto}
+.nota{font-size:.78rem;color:var(--cinza)}
+.avaliacao{background:var(--branco);padding:1rem 1.25rem;margin-bottom:.6rem;border-radius:var(--raio)}
+.avaliacao b+*{color:var(--ouro)}
+
+/* ===== Formulários e avisos ===== */
+.form-card{max-width:440px;margin:1rem auto;background:var(--branco);padding:2.25rem;border-top:3px solid var(--ouro);border-radius:var(--raio);box-shadow:var(--sombra)}
+.form-card h1{font-size:2rem;margin-bottom:1rem}
+.form-card label{display:block;margin:.9rem 0;font-size:.85rem}
+.form-card input:not([type=checkbox]){width:100%;padding:.7rem;border:1px solid #cfc8b8;font:inherit;margin-top:.3rem;border-radius:var(--raio)}
+.check{display:flex;gap:.5rem;align-items:flex-start}
+.form-card .btn{margin-top:1rem}
+.aviso{padding:.8rem 1.1rem;margin:.8rem 0;border-left:4px solid;border-radius:var(--raio)}
+.aviso-erro{background:#fdeaea;border-color:#b00020}.aviso-sucesso{background:#e8f5e9;border-color:#2e7d32}
+
+/* ===== Rodapé ===== */
+.rodape{background:var(--preto);color:#cfc7b3;margin-top:3rem;padding:3rem 2rem 1.5rem;font-size:.88rem}
+.rodape-grade{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.rodape h4{color:var(--ouro);font-size:1.3rem;margin-bottom:.8rem;letter-spacing:.08em}
+.rodape a{display:block;text-decoration:none;padding:.15rem 0;transition:.3s}.rodape a:hover{color:var(--ouro)}
+.direitos{text-align:center;border-top:1px solid #2c2c2c;margin:2rem 0 0;padding-top:1.2rem;font-size:.78rem}
+
+@media(max-width:760px){.produto{grid-template-columns:1fr;gap:1.5rem}.topo{padding:1rem}.menu-cat{justify-content:flex-start;padding:.8rem 1rem}.hero{padding:4rem 1rem}}
